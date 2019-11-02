@@ -1,0 +1,687 @@
+﻿@page
+@model NavistarWebApp.Pages.Admin.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-blue border-bottom box-shadow mb-3">
+        <div class="container">
+            <a style="color:white; font-size:20px; font-weight:600; border:2px solid white" class="navbar-brand" asp-area="" asp-page="/Index">Home </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item" style="border:2px solid white">
+                        <a style="color:white; font-size:20px; font-weight:600" class="nav-link" href="Audit">Audit Table</a> 
+                    </li>
+                    <li class="nav-item" style="border:2px solid white">
+                        <a style="color:white; font-size:20px; font-weight:600" class="nav-link" href="Admin">Administrator</a>
+                    </li>
+                    <li class="nav-item" style="border:2px solid white">
+                        <a style="color:white; font-size:20px; font-weight:600" class="nav-link" href="Attrit">Attrition</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="text-center">
+    <h1 class="display-4" style="color:white">Welcome Administrator</h1>
+    <p><i style="color:white">We are Driven by UpTime</i> <a href="https://www.navistar.com/navistar/"></a></p>
+</div>
+<!DOCTYPE html>
+
+<div style="float:right">
+    <input type='button' class='btn button-next' name='next' value='Next' />
+
+    <div style="float:left">
+        <input type='button' class='btn button-previous' name='previous' value='Previous' />
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-bordered" style="border: 1px solid black">
+        <thead class="thead-dark"style="font-size:larger">
+            <tr>
+                <th>
+                    <select style="color:black">
+                        <option value="November">Period 1 November</option>
+                        <option value="November">Period 2 December</option>
+                        <option value="November">Period 3 January</option>
+                        <option value="November">Period 4 February</option>
+                        <option value="November">Period 5 March</option>
+                        <option value="November">Period 6 April</option>
+                        <option value="November">Period 7 May</option>
+                        <option value="December">Period 8 June</option>
+                        <option value="November">Period 9 July</option>
+                        <option value="November">Period 10 August</option>
+                        <option value="November">Period 11 September</option>
+                        <option value="November">Period 12 October</option>
+                    </select>
+                </th>
+                <th>Employee ID</th>
+                <th>Finance Department</th>
+                <th>
+                    <select style="color:black">
+                        <option value="admin">Adminstrator</option>
+                        <option value="slt">SLT</option>
+                        <option value="deptO">Department Owner</option>
+                    </select>
+                </th>
+
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Approved Positions</th>
+                <th>Contractors</th>
+                <th>Open</th>
+                <th>Forecast</th>
+                <th>
+                    <div class="container">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Dropdown button
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Lock</a>
+                                <a class="dropdown-item" href="#">Unlock</a>
+                            </div>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <select style="color:black">
+                        //period 2
+                        <option value="November">Period 1 November</option>
+                        <option value="November">Period 2 December</option>
+                        <option value="November">Period 3 January</option>
+                        <option value="November">Period 4 February</option>
+                        <option value="November">Period 5 March</option>
+                        <option value="November">Period 6 April</option>
+                        <option value="November">Period 7 May</option>
+                        <option value="December">Period 8 June</option>
+                        <option value="November">Period 9 July</option>
+                        <option value="November">Period 10 August</option>
+                        <option value="November">Period 11 September</option>
+                        <option value="November">Period 12 October</option>
+                    </select>
+                </th>
+                <th>Employee ID</th>
+                <th>Finance Department</th>
+                <th>
+                    <select style="color:black">
+                        <option value="admin">Adminstrator</option>
+                        <option value="slt">SLT</option>
+                        <option value="deptO">Department Owner</option>
+                    </select>
+                </th>
+
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Approved Postions</th>
+                <th>Contractors</th>
+                <th>Open</th>
+                <th>Forecast</th>
+
+                <th>
+                    <div class="container">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Dropdown button
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Lock</a>
+                                <a class="dropdown-item" href="#">Unlock</a>
+                            </div>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <select style="color:black">
+                        //period 3
+                        <option value="November">Period 1 November</option>
+                        <option value="November">Period 2 December</option>
+                        <option value="November">Period 3 January</option>
+                        <option value="November">Period 4 February</option>
+                        <option value="November">Period 5 March</option>
+                        <option value="November">Period 6 April</option>
+                        <option value="November">Period 7 May</option>
+                        <option value="December">Period 8 June</option>
+                        <option value="November">Period 9 July</option>
+                        <option value="November">Period 10 August</option>
+                        <option value="November">Period 11 September</option>
+                        <option value="November">Period 12 October</option>
+                    </select>
+                </th>
+
+                <th>Employee ID</th>
+                <th>Finance Department</th>
+                <th>
+                    <select style="color:black">
+                        <option value="admin">Adminstrator</option>
+                        <option value="slt">SLT</option>
+                        <option value="deptO">Department Owner</option>
+                    </select>
+                </th>
+
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Approved Postions</th>
+                <th>Contractors</th>
+                <th>Open</th>
+                <th>Forecast</th>
+
+                <th>
+                    <div class="container">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Dropdown button
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Lock</a>
+                                <a class="dropdown-item" href="#">Unlock</a>
+                            </div>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <select style="color:black">
+                        //period 4
+                        <option value="November">Period 1 November</option>
+                        <option value="November">Period 2 December</option>
+                        <option value="November">Period 3 January</option>
+                        <option value="November">Period 4 February</option>
+                        <option value="November">Period 5 March</option>
+                        <option value="November">Period 6 April</option>
+                        <option value="November">Period 7 May</option>
+                        <option value="December">Period 8 June</option>
+                        <option value="November">Period 9 July</option>
+                        <option value="November">Period 10 August</option>
+                        <option value="November">Period 11 September</option>
+                        <option value="November">Period 12 October</option>
+                    </select>
+                </th>
+                <th>Employee ID</th>
+                <th>Finance Department</th>
+                <th>
+                    <select style="color:black">
+                        <option value="admin">Adminstrator</option>
+                        <option value="slt">SLT</option>
+                        <option value="deptO">Department Owner</option>
+                    </select>
+                </th>
+
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Approved Postions</th>
+                <th>Contractors</th>
+                <th>Open</th>
+                <th>Forecast</th>
+
+                <th>
+                    <div class="container">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Dropdown button
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Lock</a>
+                                <a class="dropdown-item" href="#">Unlock</a>
+                            </div>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <select style="color:black">
+                        //period 5
+                        <option value="November">Period 1 November</option>
+                        <option value="November">Period 2 December</option>
+                        <option value="November">Period 3 January</option>
+                        <option value="November">Period 4 February</option>
+                        <option value="November">Period 5 March</option>
+                        <option value="November">Period 6 April</option>
+                        <option value="November">Period 7 May</option>
+                        <option value="December">Period 8 June</option>
+                        <option value="November">Period 9 July</option>
+                        <option value="November">Period 10 August</option>
+                        <option value="November">Period 11 September</option>
+                        <option value="November">Period 12 October</option>
+                    </select>
+                </th>
+                <th>Employee ID</th>
+                <th>Finance Department</th>
+                <th>
+                    <select style="color:black">
+                        <option value="admin">Adminstrator</option>
+                        <option value="slt">SLT</option>
+                        <option value="deptO">Department Owner</option>
+                    </select>
+                </th>
+
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Approved Postions</th>
+                <th>Contractors</th>
+                <th>Open</th>
+                <th>Forecast</th>
+
+                <th>
+                    <div class="container">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Dropdown button
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Lock</a>
+                                <a class="dropdown-item" href="#">Unlock</a>
+                            </div>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <select style="color:black">
+                        //period 6
+                        <option value="November">Period 1 November</option>
+                        <option value="November">Period 2 December</option>
+                        <option value="November">Period 3 January</option>
+                        <option value="November">Period 4 February</option>
+                        <option value="November">Period 5 March</option>
+                        <option value="November">Period 6 April</option>
+                        <option value="November">Period 7 May</option>
+                        <option value="December">Period 8 June</option>
+                        <option value="November">Period 9 July</option>
+                        <option value="November">Period 10 August</option>
+                        <option value="November">Period 11 September</option>
+                        <option value="November">Period 12 October</option>
+                    </select>
+                </th>
+                <th>Employee ID</th>
+                <th>Finance Department</th>
+                <th>
+                    <select style="color:black">
+                        <option value="admin">Adminstrator</option>
+                        <option value="slt">SLT</option>
+                        <option value="deptO">Department Owner</option>
+                    </select>
+                </th>
+
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Approved Postions</th>
+                <th>Contractors</th>
+                <th>Open</th>
+                <th>Forecast</th>
+
+                <th>
+                    <div class="container">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Dropdown button
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Lock</a>
+                                <a class="dropdown-item" href="#">Unlock</a>
+                            </div>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <select style="color:black">
+                        //period 7
+                        <option value="November">Period 1 November</option>
+                        <option value="November">Period 2 December</option>
+                        <option value="November">Period 3 January</option>
+                        <option value="November">Period 4 February</option>
+                        <option value="November">Period 5 March</option>
+                        <option value="November">Period 6 April</option>
+                        <option value="November">Period 7 May</option>
+                        <option value="December">Period 8 June</option>
+                        <option value="November">Period 9 July</option>
+                        <option value="November">Period 10 August</option>
+                        <option value="November">Period 11 September</option>
+                        <option value="November">Period 12 October</option>
+                    </select>
+                </th>
+                <th>Employee ID</th>
+                <th>Finance Department</th>
+                <th>
+                    <select style="color:black">
+                        <option value="admin">Adminstrator</option>
+                        <option value="slt">SLT</option>
+                        <option value="deptO">Department Owner</option>
+                    </select>
+                </th>
+
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Approved Postions</th>
+                <th>Contractors</th>
+                <th>Open</th>
+                <th>Forecast</th>
+
+                <th>
+                    <div class="container">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Dropdown button
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Lock</a>
+                                <a class="dropdown-item" href="#">Unlock</a>
+                            </div>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <select style="color:black">
+                        //period 8
+                        <option value="November">Period 1 November</option>
+                        <option value="November">Period 2 December</option>
+                        <option value="November">Period 3 January</option>
+                        <option value="November">Period 4 February</option>
+                        <option value="November">Period 5 March</option>
+                        <option value="November">Period 6 April</option>
+                        <option value="November">Period 7 May</option>
+                        <option value="December">Period 8 June</option>
+                        <option value="November">Period 9 July</option>
+                        <option value="November">Period 10 August</option>
+                        <option value="November">Period 11 September</option>
+                        <option value="November">Period 12 October</option>
+                    </select>
+                </th>
+                <th>Employee ID</th>
+                <th>Finance Department</th>
+                <th>
+                    <select style="color:black">
+                        <option value="admin">Adminstrator</option>
+                        <option value="slt">SLT</option>
+                        <option value="deptO">Department Owner</option>
+                    </select>
+                </th>
+
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Approved Postions</th>
+                <th>Contractors</th>
+                <th>Open</th>
+                <th>Forecast</th>
+
+                <th>
+                    <div class="container">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Dropdown button
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Lock</a>
+                                <a class="dropdown-item" href="#">Unlock</a>
+                            </div>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <select style="color:black">
+                        //period 9
+                        <option value="November">Period 1 November</option>
+                        <option value="November">Period 2 December</option>
+                        <option value="November">Period 3 January</option>
+                        <option value="November">Period 4 February</option>
+                        <option value="November">Period 5 March</option>
+                        <option value="November">Period 6 April</option>
+                        <option value="November">Period 7 May</option>
+                        <option value="December">Period 8 June</option>
+                        <option value="November">Period 9 July</option>
+                        <option value="November">Period 10 August</option>
+                        <option value="November">Period 11 September</option>
+                        <option value="November">Period 12 October</option>
+                    </select>
+                </th>
+                <th>Employee ID</th>
+                <th>Finance Department</th>
+                <th>
+                    <select style="color:black">
+                        <option value="admin">Adminstrator</option>
+                        <option value="slt">SLT</option>
+                        <option value="deptO">Department Owner</option>
+                    </select>
+                </th>
+
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Approved Postions</th>
+                <th>Contractors</th>
+                <th>Open</th>
+                <th>Forecast</th>
+
+                <th>
+                    <div class="container">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Dropdown button
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Lock</a>
+                                <a class="dropdown-item" href="#">Unlock</a>
+                            </div>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <select style="color:black">
+                        //period 10
+                        <option value="November">Period 1 November</option>
+                        <option value="November">Period 2 December</option>
+                        <option value="November">Period 3 January</option>
+                        <option value="November">Period 4 February</option>
+                        <option value="November">Period 5 March</option>
+                        <option value="November">Period 6 April</option>
+                        <option value="November">Period 7 May</option>
+                        <option value="December">Period 8 June</option>
+                        <option value="November">Period 9 July</option>
+                        <option value="November">Period 10 August</option>
+                        <option value="November">Period 11 September</option>
+                        <option value="November">Period 12 October</option>
+                    </select>
+                </th>
+                <th>Employee ID</th>
+                <th>Finance Department</th>
+                <th>
+                    <select style="color:black">
+                        <option value="admin">Adminstrator</option>
+                        <option value="slt">SLT</option>
+                        <option value="deptO">Department Owner</option>
+                    </select>
+                </th>
+
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Approved Postions</th>
+                <th>Contractors</th>
+                <th>Open</th>
+                <th>Forecast</th>
+
+                <th>
+                    <div class="container">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Dropdown button
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Lock</a>
+                                <a class="dropdown-item" href="#">Unlock</a>
+                            </div>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <select style="color:black">
+                        //period 11
+                        <option value="November">Period 1 November</option>
+                        <option value="November">Period 2 December</option>
+                        <option value="November">Period 3 January</option>
+                        <option value="November">Period 4 February</option>
+                        <option value="November">Period 5 March</option>
+                        <option value="November">Period 6 April</option>
+                        <option value="November">Period 7 May</option>
+                        <option value="December">Period 8 June</option>
+                        <option value="November">Period 9 July</option>
+                        <option value="November">Period 10 August</option>
+                        <option value="November">Period 11 September</option>
+                        <option value="November">Period 12 October</option>
+                    </select>
+                </th>
+                <th>Employee ID</th>
+                <th>Finance Department</th>
+                <th>
+                    <select style="color:black">
+                        <option value="admin">Adminstrator</option>
+                        <option value="slt">SLT</option>
+                        <option value="deptO">Department Owner</option>
+                    </select>
+                </th>
+
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Approved Postions</th>
+                <th>Contractors</th>
+                <th>Open</th>
+                <th>Forecast</th>
+
+                <th>
+                    <div class="container">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Dropdown button
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Lock</a>
+                                <a class="dropdown-item" href="#">Unlock</a>
+                            </div>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <select style="color:black">
+                        //period 12
+                        <option value="November">Period 1 November</option>
+                        <option value="November">Period 2 December</option>
+                        <option value="November">Period 3 January</option>
+                        <option value="November">Period 4 February</option>
+                        <option value="November">Period 5 March</option>
+                        <option value="November">Period 6 April</option>
+                        <option value="November">Period 7 May</option>
+                        <option value="December">Period 8 June</option>
+                        <option value="November">Period 9 July</option>
+                        <option value="November">Period 10 August</option>
+                        <option value="November">Period 11 September</option>
+                        <option value="November">Period 12 October</option>
+                    </select>
+                </th>
+                <th>Employee ID</th>
+                <th>Finance Department</th>
+                <th>
+                    <select style="color:black">
+                        <option value="admin">Adminstrator</option>
+                        <option value="slt">SLT</option>
+                        <option value="deptO">Department Owner</option>
+                    </select>
+                </th>
+
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Approved Postions</th>
+                <th>Contractors</th>
+                <th>Open</th>
+                <th>Forecast</th>
+
+                <th>
+                    <div class="container">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Dropdown button
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Lock</a>
+                                <a class="dropdown-item" href="#">Unlock</a>
+                            </div>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+    </table>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <div>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <div class="container">
+    </div>
+</div>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<section>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</section>
+
